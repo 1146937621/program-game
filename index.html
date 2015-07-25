@@ -2,30 +2,10 @@
 <html>
 <head>
 	<title></title>
-	<script src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
-	<script>
-		$(document).ready(function(){
-			$("button").click(function(){
-  				$.get("demo_test.php",function(data,status){
-    				alert("Data: " + data + "\nStatus: " + status);
-  				});
-			});
-			// $("button").click(function(){
-			//   $.post("demo_test_post.php",
-			//   {
-			//     name:"Donald Duck",
-			//     city:"Duckburg"
-			//   },
-			//   function(data,status){
-			//     alert("Data: " + data + "\nStatus: " + status);
-			//   });
-			// });
-		// 	var XHR=new XMLHttpRequest();
-		});
-	</script>
+	<link rel="stylesheet" type="text/css" href="css/layout.css">
 </head>
 <body>
 <!-- <input type="button" value="获取"> -->
-<button type="button">获取</button>
+	<div class="red"></div>
 </body>
 </html>
