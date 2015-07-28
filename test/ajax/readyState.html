@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="jquery-1.9.1.js"></script>
+	<script> 
+	$(document).ready(function(){
+		$("input").click(function(){
+			$.ajax({
+				type:"POST",
+				url:"load.html",
+				data:"name=css8"
+			});
+			$("div").ajaxStart(function(){
+				alert("ajax 请求开始");
+			})
+			$("div").ajaxSend(function(){
+				alert("ajax 请求将要发送");
+			})
+			$("div").ajaxComplete(function(){
+				alert("ajax 请求完成");
+			})
+			$("div").ajaxSuccess(function(){
+				alert("ajax 请求成功");
+			})
+			$("div").ajaxStop(function(){
+				alert("ajax 请求结束");
+			})
+			$("div").ajaxError(function(){
+				alert("ajax 发送错误");
+			})
+		});
+	})
+	</script>
+</head>
+<body>
+<input type="button" value="开始！">
+</body>
+</html>

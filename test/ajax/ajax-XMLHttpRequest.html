@@ -1,15 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>XMLHttpRequest对象的详细细节及封装
-	</title>
+	<title>XMLHttpRequest对象的详细细节及封装</title>
+	<script src="jquery-1.9.1.js"></script>
+	<script>
+		// var xmlHttp;
+		// function createxmlHttpRequest(){
+		// 	if(window.ActiveXObject){
+		// 		xmlHttp=new ActiveXObject("Microsoft.xmlHttp");
+		// 	}else if(window.XMLHttpRequest)
+		// 		xmlHttp=new XMLHttpRequest();
+		// }
+
+		// $(document).ready(function(){
+		// 	$("input").click(function(){
+		// 		$("#one").load('load.html',function(){
+		// 			alert("load was performed.")
+		// 		});
+		// 	})
+		// })
+	$(document).ready(function(){
+		$("input").click(function(){
+			var str=($.ajax({
+				url:"load.html",
+				async:false
+			})).responseText;
+			$("#one").html(str);
+		});
+	})
+		
+	</script>
 </head>
 <body>
 
 
 
-
-
+<input type="button" value="获取新消息！">
+<div id="one" style="background:red;height:200px;width:200px;">zheliyouzi</div>
 
 
 
